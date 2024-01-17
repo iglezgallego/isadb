@@ -5,13 +5,22 @@
 int main(int argc,char *argv[]){
     //Escribir en un archivo de texto
     FILE *archivo;
-    char *nombrearchivo = argv[1];
+    char *basededatos = argv[1];
+    char *nombrearchivo = argv[2];
+    
+    char ruta[100];
+    strcpy(ruta,basededatos);
+    strcat(ruta,"-");
+    strcat(ruta,nombrearchivo);
+    strcat(ruta,".txt");
+    printf(ruta);
+    
     //Guardo el nombre de archivo terminado en .txt
-    archivo = fopen(strcat(nombrearchivo,".txt"),"a");
-    //escribo en consola con "","" lo que quiero que se escriba en el archivo, guarda dos parametros
-    //el primer parametro equivale a la tabla y el segundo al dato que quiero guardar
-    char *texto = argv[2];
+    archivo = fopen(ruta,"a");
+    
+    char *texto = argv[3];
     fputs(strcat(texto,"\n"),archivo);
     fclose(archivo);
+    //En el argumento1 se guarda el nombre de la bbdd, el argumento2 el nombre de la tabla, y el argumento3 el dato a guardar
     return 0;
 }
