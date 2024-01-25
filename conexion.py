@@ -14,7 +14,7 @@ class Isadb:
         self.documento = documento
         self.contenido = contenido
         # Construye el comando para ejecutar en la línea de comandos
-        comando = '"C:\Users\iglez\Documents\GitHub\isadb\isadb.exe" '+self.operacion+' '+self.basededatos+' '+self.coleccion+' '+self.documento+' "'+self.contenido+'"'
+        comando = '"C:\\Users\\iglez\\Documents\\GitHub\\isadb\\isadb.exe" '+self.operacion+' '+self.basededatos+' '+self.coleccion+' '+self.documento+' "'+self.contenido+'"'
         # Ejecuta el comando y captura el resultado
         resultado = subprocess.run(comando,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
         # Verifica si la operación fue exitosa
@@ -22,3 +22,7 @@ class Isadb:
             return("ok")
         else:
             return("ko")
+
+#Hago una instancia de la clase
+Conexion1 = Isadb("miempresa")
+Conexion1.insert("clientes", "cliente9", "este es otro contenido de prueba")
