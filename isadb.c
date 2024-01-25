@@ -14,7 +14,7 @@ int main(int argc,char *argv[]){
     
     /*
         Uso:
-        jvbd.exe [operacion] [basededatos] [coleccion] [operacion] [documento] [contenido]
+        jvbd.exe [operacion] [basededatos] [coleccion] [documento] [contenido]
     
     */
     
