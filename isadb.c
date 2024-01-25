@@ -12,6 +12,12 @@ int main(int argc,char *argv[]){
     char *basededatos = argv[2];
     char *coleccion = argv[3];
     
+    /*
+        Uso:
+        jvbd.exe [operacion] [basededatos] [coleccion] [operacion] [documento] [contenido]
+    
+    */
+    
     //PARA LEER LOS DATOS DE LOS ARCHIVOS
     //Como argumentos que tengo que pasar, tengo la operacion, la bbdd, el nombre de la coleccion y el nombre del documento sin el.json, 4 argumentos
     if(strcmp(operacion,"select") == 0){
